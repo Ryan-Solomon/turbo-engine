@@ -3,6 +3,17 @@ import styled from 'styled-components';
 
 export const Counter = () => {
   const [count, setCount] = useState(0);
+
+  function increase() {
+    setCount((c) => c + 1);
+  }
+  function decrease() {
+    setCount((c) => Math.max(0, c - 1));
+  }
+  function clear() {
+    setCount(0);
+  }
+
   return (
     <Container>
       <CounterContainer>
