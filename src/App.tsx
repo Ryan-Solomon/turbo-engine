@@ -1,8 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
+import { CounterPage } from './pages/CounterPage';
 
-function App() {
-  return <h1>App</h1>;
-}
-
-export default App;
+export const App = () => {
+  return (
+    <Router>
+      <Route exact path='/'>
+        <HomePage />
+      </Route>
+      <Route exact path='/counter'>
+        <CounterPage />
+      </Route>
+    </Router>
+  );
+};
