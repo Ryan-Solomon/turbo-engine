@@ -18,6 +18,11 @@ export const Counter = () => {
     <Container>
       <CounterContainer>
         <CounterTitle>Count: {count}</CounterTitle>
+        <ButtonContainer>
+          <Button>Increase</Button>
+          <Button>Decrease</Button>
+          <Button>Clear</Button>
+        </ButtonContainer>
       </CounterContainer>
     </Container>
   );
@@ -29,9 +34,25 @@ const Container = styled.div`
   height: 70vh;
 `;
 
-const CounterContainer = styled.div``;
+const CounterContainer = styled.div`
+  box-shadow: 2px 2px 10px #636363;
+  padding: 3rem;
+`;
 
 const CounterTitle = styled.h1`
   color: white;
   font-size: 3rem;
+  text-align: center;
+`;
+
+const ButtonContainer = styled.div``;
+
+const Button = styled.button`
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  color: white;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 10px #636363;
+  font-size: 1.5rem;
+  margin: 2rem;
 `;
