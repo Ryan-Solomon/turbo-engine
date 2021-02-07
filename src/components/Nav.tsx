@@ -18,7 +18,8 @@ export const Nav = () => {
 };
 
 const NavContainer = styled.nav`
-  background: #333;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
   box-shadow: 2px 2px 10px #636363;
 `;
 
@@ -34,8 +35,9 @@ const NavItem = styled.li`
   transition: all 0.2s ease;
 
   &:hover {
-    background: #bdbdbd;
-    color: #000000;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
     cursor: pointer;
+    color: #dddddd;
   }
 `;
