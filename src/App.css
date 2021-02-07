@@ -7,3 +7,13 @@
 html {
   font-size: 10px;
 }
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  height: 100vh;
+}
