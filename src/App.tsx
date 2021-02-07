@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
-import { CounterPage } from './pages/CounterPage';
+import { CounterPage } from './pages/counter/CounterPage';
 import { Nav } from './components/Nav';
 
 export const App = () => {
