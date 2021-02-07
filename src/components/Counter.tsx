@@ -19,9 +19,9 @@ export const Counter = () => {
       <CounterContainer>
         <CounterTitle>Count: {count}</CounterTitle>
         <ButtonContainer>
-          <Button>Increase</Button>
-          <Button>Decrease</Button>
-          <Button>Clear</Button>
+          <Button onClick={increase}>Increase</Button>
+          <Button onClick={decrease}>Decrease</Button>
+          <Button onClick={clear}>Clear</Button>
         </ButtonContainer>
       </CounterContainer>
     </Container>
@@ -55,4 +55,11 @@ const Button = styled.button`
   box-shadow: 2px 2px 10px #636363;
   font-size: 1.5rem;
   margin: 2rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
 `;
