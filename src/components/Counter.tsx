@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 export const Counter = () => {
+  const [count, setCount] = useState(0);
   return (
     <Container>
       <CounterContainer>
-        <CounterTitle>Count: 0</CounterTitle>
+        <CounterTitle>Count: {count}</CounterTitle>
       </CounterContainer>
     </Container>
   );
