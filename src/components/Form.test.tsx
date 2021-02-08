@@ -5,6 +5,8 @@ import { Form } from './Form';
 describe('Form tests', () => {
   test('render form', () => {
     render(<Form />);
+    expect(screen.getByText(/submit/i)).toBeInTheDocument();
+    screen.debug();
   });
 });
 
