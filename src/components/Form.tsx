@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styled from 'styled-components';
 
 type TFormState = {
@@ -29,9 +29,18 @@ export const Form = () => {
     }
   }
 
+  function handleFormSubmit(e: FormEvent) {
+    e.preventDefault();
+    setFormState({
+      fullName: '',
+      email: '',
+      password: '',
+    });
+  }
+
   return (
     <>
-      <SForm>
+      <SForm onSubmit={handleFormSubmit}>
         <FormSection>
           <Label id='name'>Full Name</Label>
           <Input
@@ -60,7 +69,7 @@ export const Form = () => {
           />
         </FormSection>
         <FormSection>
-          <Button>Submit</Button>
+          <Button type='submit'>Submit</Button>
         </FormSection>
       </SForm>
     </>
