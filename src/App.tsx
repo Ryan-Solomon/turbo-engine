@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HomePage } from './pages/HomePage';
 import { CounterPage } from './pages/counter/CounterPage';
 import { Nav } from './components/Nav';
+import { FormPage } from './pages/form/FormPage';
 
 export const App = () => {
   return (
@@ -14,6 +15,9 @@ export const App = () => {
       </Route>
       <Route exact path='/counter'>
         <CounterPage />
+      </Route>
+      <Route exact path='/form'>
+        <FormPage />
       </Route>
     </Router>
   );
