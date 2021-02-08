@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
 
 type TFormState = {
@@ -59,6 +59,9 @@ export const Form = () => {
             name='password'
           />
         </FormSection>
+        <FormSection>
+          <Button>Submit</Button>
+        </FormSection>
       </SForm>
     </>
   );
@@ -66,8 +69,34 @@ export const Form = () => {
 
 const SForm = styled.form``;
 
-const FormSection = styled.section``;
+const FormSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+`;
 
-const Label = styled.label``;
+const Label = styled.label`
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
 
-const Input = styled.input``;
+const Input = styled.input`
+  font-size: 2rem;
+  padding: 0.4rem;
+`;
+
+const Button = styled.button`
+  padding: 1rem;
+  font-size: 2rem;
+  background: none;
+  outline: 1px solid white;
+  color: white;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: white;
+    color: black;
+    cursor: pointer;
+  }
+`;
