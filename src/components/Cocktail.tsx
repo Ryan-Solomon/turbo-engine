@@ -32,4 +32,8 @@ const Title = styled.h2`
 const Image = styled.img`
   height: 250px;
   object-fit: cover;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

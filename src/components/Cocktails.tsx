@@ -15,7 +15,7 @@ export type TCocktail = {
   strCategory: string;
 };
 
-type TResponse = {
+export type TResponse = {
   drinks: TCocktail[];
 };
 

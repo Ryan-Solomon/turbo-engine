@@ -6,6 +6,7 @@ import { CounterPage } from './pages/counter/CounterPage';
 import { Nav } from './components/Nav';
 import { FormPage } from './pages/form/FormPage';
 import { CocktailsPage } from './pages/cocktails/CocktailsPage';
+import { CocktailDetails } from './components/CocktailDetails';
 
 export const App = () => {
   return (
@@ -22,6 +23,9 @@ export const App = () => {
       </Route>
       <Route exact path='/cocktails'>
         <CocktailsPage />
+      </Route>
+      <Route exact path='/cocktails/:id'>
+        <CocktailDetails />
       </Route>
     </Router>
   );
