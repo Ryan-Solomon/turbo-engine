@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import useSWR from 'swr';
+import { Cocktail } from './Cocktail';
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const url =
   'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
-type TCocktail = {
+export type TCocktail = {
   idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
@@ -23,7 +24,7 @@ export const Cocktails = () => {
   return (
     <Container>
       {data.drinks.map((drink) => {
-        return <h1 key={drink.idDrink}>{drink.strDrink}</h1>;
+        return <Cocktail key={drink.idDrink} cocktail={drink} />;
       })}
     </Container>
   );
