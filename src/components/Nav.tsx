@@ -15,6 +15,9 @@ export const Nav = () => {
         <Link to='/form'>
           <NavItem>Form</NavItem>
         </Link>
+        <Link to='/cocktails'>
+          <NavItem>Cocktails</NavItem>
+        </Link>
       </NavItems>
     </NavContainer>
   );

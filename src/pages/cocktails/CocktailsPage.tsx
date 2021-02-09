@@ -1,9 +1,10 @@
 import React from 'react';
+import { Cocktails } from '../../components/Cocktails';
 
 export const CocktailsPage = () => {
   return (
     <>
-      <h1>Cocktails</h1>
+      <Cocktails />
     </>
   );
 };

@@ -5,6 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { CounterPage } from './pages/counter/CounterPage';
 import { Nav } from './components/Nav';
 import { FormPage } from './pages/form/FormPage';
+import { CocktailsPage } from './pages/cocktails/CocktailsPage';
 
 export const App = () => {
   return (
@@ -18,6 +19,9 @@ export const App = () => {
       </Route>
       <Route exact path='/form'>
         <FormPage />
+      </Route>
+      <Route exact path='/cocktails'>
+        <CocktailsPage />
       </Route>
     </Router>
   );
