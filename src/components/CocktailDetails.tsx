@@ -11,9 +11,7 @@ export const CocktailDetails = () => {
   const location = useLocation();
   const { pathname } = location;
   const id = pathname.split('/')[2];
-  console.log(id);
-  console.log(location);
-  const { data, error } = useSWR<TResponse>(url + id.toString(), fetcher);
+  const { data, error } = useSWR<TResponse>(url + id, fetcher);
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
   const drink = data.drinks[0];
