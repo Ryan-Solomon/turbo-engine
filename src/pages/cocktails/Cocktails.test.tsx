@@ -12,6 +12,6 @@ describe('Cocktails page', () => {
     render(<CocktailsPage />);
     expect(screen.getByText(/loading/i)).toBeInTheDocument();
     await waitForElementToBeRemoved(() => screen.queryByText(/loading/i));
-    screen.debug();
+    expect(screen.getAllByText(/margarita/i)[0]).toBeInTheDocument();
   });
 });
