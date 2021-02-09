@@ -1,15 +1,22 @@
 import React, { FC } from 'react';
 import { TCocktail } from './Cocktails';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 type TProps = {
   cocktail: TCocktail;
 };
 
 export const Cocktail: FC<TProps> = ({ cocktail }) => {
-  const { strDrink, strDrinkThumb } = cocktail;
+  const { strDrink, strDrinkThumb, idDrink } = cocktail;
+  const history = useHistory();
+
+  function navigateToDetailsCocktail() {
+    history.push(`/cocktails/${idDrink}`);
+  }
+
   return (
-    <Container>
+    <Container onClick={navigateToDetailsCocktail}>
       <Title>{strDrink}</Title>
       <Image src={strDrinkThumb} alt='drink' />
     </Container>
