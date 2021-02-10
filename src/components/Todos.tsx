@@ -1,5 +1,6 @@
 import React from 'react';
 import { useReducer } from 'react';
+import styled from 'styled-components';
 
 type TTodo = {
   todo: string;
@@ -56,5 +57,38 @@ export const Todos = () => {
     dispatchFunction({ type: 'CLEAR' });
   }
 
-  return <h1>Todos</h1>;
+  return (
+    <Container>
+      <Title>Todos</Title>
+      {todoState.todos.length > 0 ? (
+        todoState.todos.map((todo) => {
+          return (
+            <>
+              <TodoContainer key={todo.id}>
+                <TodoText>{todo.todo}</TodoText>
+                <TodoButton onClick={() => removeTodo(todo.id)}>X</TodoButton>
+              </TodoContainer>
+              <TodoButton onClick={clearTodos}>Clear</TodoButton>;
+            </>
+          );
+        })
+      ) : (
+        <h1>Add some todos</h1>
+      )}
+    </Container>
+  );
 };
+
+const Container = styled.div`
+  color: white;
+`;
+
+const Title = styled.h2`
+  font-size: 3.4rem;
+`;
+
+const TodoContainer = styled.div``;
+
+const TodoText = styled.h4``;
+
+const TodoButton = styled.button``;
