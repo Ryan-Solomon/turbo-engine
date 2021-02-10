@@ -46,5 +46,15 @@ const initialState: TTodoState = {
 export const Todos = () => {
   const [todoState, dispatchFunction] = useReducer(todoReducer, initialState);
 
+  function addTodo(todo: TTodo) {
+    dispatchFunction({ type: 'ADD', payload: todo });
+  }
+  function removeTodo(id: number) {
+    dispatchFunction({ type: 'REMOVE', payload: id });
+  }
+  function clearTodos() {
+    dispatchFunction({ type: 'CLEAR' });
+  }
+
   return <h1>Todos</h1>;
 };
