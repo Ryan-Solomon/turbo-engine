@@ -7,6 +7,7 @@ import { Nav } from './components/Nav';
 import { FormPage } from './pages/form/FormPage';
 import { CocktailsPage } from './pages/cocktails/CocktailsPage';
 import { CocktailDetails } from './components/CocktailDetails';
+import { TodosPage } from './pages/todos/TodosPage';
 
 export const App = () => {
   return (
@@ -26,6 +27,9 @@ export const App = () => {
       </Route>
       <Route exact path='/cocktails/:id'>
         <CocktailDetails />
+      </Route>
+      <Route exact path='/todos'>
+        <TodosPage />
       </Route>
     </Router>
   );

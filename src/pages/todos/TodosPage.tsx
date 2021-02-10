@@ -1,7 +1,7 @@
 import React from 'react';
 import { Todos } from '../../components/Todos';
 
-export const TodoPage = () => {
+export const TodosPage = () => {
   return (
     <>
       <Todos />
