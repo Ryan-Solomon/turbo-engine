@@ -1,4 +1,5 @@
 import React from 'react';
+import { useReducer } from 'react';
 
 type TTodo = {
   todo: string;
@@ -22,7 +23,7 @@ type TAction =
       type: 'CLEAR';
     };
 
-function todoReducer(state: TTodoState, action: TAction) {
+function todoReducer(state: TTodoState, action: TAction): TTodoState {
   switch (action.type) {
     case 'ADD':
       return { ...state, todos: [...state.todos, action.payload] };
@@ -38,6 +39,12 @@ function todoReducer(state: TTodoState, action: TAction) {
   }
 }
 
+const initialState: TTodoState = {
+  todos: [],
+};
+
 export const Todos = () => {
+  const [todoState, dispatchFunction] = useReducer(todoReducer, initialState);
+
   return <h1>Todos</h1>;
 };
